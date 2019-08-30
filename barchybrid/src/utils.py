@@ -58,7 +58,12 @@ class Treebank(object):
         self.dev_gold = devfile
         self.test_gold = testfile
         self.testfile = testfile
-        self.outfilename = None
+        if testfile:
+                filename = testfile.split('/')[-1]
+        else:
+                filename = None
+                
+        self.outfilename = filename
         self.proxy_tbank = None
 
 
