@@ -59,7 +59,7 @@ class Treebank(object):
         self.test_gold = testfile
         self.testfile = testfile
         if testfile:
-                filename = testfile.split('/')[-1]
+                filename = os.path.basename(testfile)
         else:
                 filename = None
                 
